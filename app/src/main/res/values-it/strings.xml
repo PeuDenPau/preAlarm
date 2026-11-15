@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">preAlarm</string>
+
+    <string name="home_title">A che ora esci?</string>
+    <string name="home_empty_title">Ancora nessuna routine</string>
+    <string name="home_empty_text">Crea la tua prima routine con le cose che fai prima di uscire di casa.</string>
+    <string name="new_routine">Nuova routine</string>
+    <string name="exact_alarm_banner">Per far suonare gli avvisi all\'ora esatta, consenti le sveglie esatte nelle impostazioni.</string>
+    <string name="open_settings">Apri le impostazioni</string>
+
+    <string name="play_routine">Inizia</string>
+    <string name="delete_routine">Elimina</string>
+    <string name="edit_routine">Modifica</string>
+
+    <string name="editor_new_title">Nuova routine</string>
+    <string name="editor_edit_title">Modifica routine</string>
+    <string name="routine_name_label">Nome della routine</string>
+    <string name="departure_time_label">Orario di uscita</string>
+    <string name="departure_time_value">Esco alle %1$s</string>
+    <string name="change_time">Cambia ora</string>
+    <string name="tasks_section">Attività, in ordine</string>
+    <string name="task_name_hint">Nuova attività</string>
+    <string name="minutes_hint">min</string>
+    <string name="task_minutes_value">%1$d min</string>
+    <string name="add_task">Aggiungi attività</string>
+    <string name="move_up">Sposta su</string>
+    <string name="move_down">Sposta giù</string>
+    <string name="remove_task">Rimuovi</string>
+    <string name="save">Salva</string>
+    <string name="cancel">Annulla</string>
+    <string name="ok">OK</string>
+    <string name="pick_time_title">Orario di uscita</string>
+    <string name="total_summary">%1$d min di preparazione · %2$d attività</string>
+    <string name="editor_needs_name">Dai un nome alla routine</string>
+    <string name="editor_needs_tasks">Aggiungi almeno un\'attività</string>
+    <string name="start_preview">Inizieresti alle %1$s</string>
+    <string name="start_without_saving">Inizia senza salvare</string>
+    <string name="edit_task">Modifica attività</string>
+
+    <string name="help">Guida</string>
+    <string name="help_title">Come funziona</string>
+    <string name="help_body">1. Crea una routine con le attività che fai prima di uscire e quanto tempo richiede ciascuna.\n2. Tocca «Inizia»: l\'app calcola a che ora devi iniziare e programma gli avvisi.\n3. Alla fine di ogni periodo suona un avviso breve. Non c\'è nulla da scartare.\n4. Quando finisci un\'attività, tocca «Fatto!» perché l\'app ti dica se sei in orario, in anticipo o in ritardo.\n\nSuggerimento: usa «Inizia senza salvare» per provare una routine una volta sola senza salvarla.</string>
+
+    <string name="session_leaving_at">Esci alle %1$s</string>
+    <string name="session_departure_in">Uscita tra %1$s</string>
+    <string name="session_current_task">Adesso tocca a</string>
+    <string name="session_done_button">Fatto!</string>
+    <string name="session_next_up">Poi: %1$s</string>
+    <string name="session_on_time">Sei in orario</string>
+    <string name="session_behind">Sei in ritardo di %1$s</string>
+    <string name="session_ahead">Sei in anticipo di %1$s</string>
+    <string name="session_all_done_title">Tutto pronto!</string>
+    <string name="session_all_done_text">Puoi uscire. Ti avanzano %1$s.</string>
+    <string name="session_all_done_late_text">Esci con %1$s di ritardo. Sbrigati!</string>
+    <string name="session_overshoot">+%1$s in più</string>
+    <string name="session_remaining_left">%1$s rimanenti</string>
+    <string name="session_stop">Termina</string>
+    <string name="session_stop_confirm_title">Terminare la sessione?</string>
+    <string name="session_stop_confirm_text">Gli avvisi in attesa verranno annullati.</string>
+    <string name="session_task_done_at">Fatto alle %1$s</string>
+
+    <string name="notify_channel_name">Avvisi di routine</string>
+    <string name="notify_start_title">Inizia la tua routine</string>
+    <string name="notify_start_text">Tocca iniziare: %1$s (%2$d min)</string>
+    <string name="notify_task_end_title">Tempo scaduto</string>
+    <string name="notify_task_end_text">«%1$s» è terminata. Tocca «Fatto!» quando puoi.</string>
+    <string name="notify_departure_title">È l\'ora!</string>
+    <string name="notify_departure_text">È ora di uscire. Buona giornata!</string>
+</resources>

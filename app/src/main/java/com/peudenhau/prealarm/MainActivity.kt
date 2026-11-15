@@ -54,9 +54,11 @@ fun PreAlarmApp(vm: AppViewModel = viewModel(factory = AppViewModel.Factory)) {
             onNameChange = vm::updateEditorName,
             onDepartureChange = vm::updateEditorDeparture,
             onAddTask = vm::addTask,
+            onUpdateTask = vm::updateTask,
             onRemoveTask = vm::removeTask,
             onMoveTask = vm::moveTask,
             onSave = vm::saveEditor,
+            onStartTemporary = vm::startTemporary,
         )
         return
     }

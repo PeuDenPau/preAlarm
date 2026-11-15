@@ -31,6 +31,9 @@ data class EditorState(
     val nextTaskId: Long,
 ) {
     val isValid: Boolean get() = name.isNotBlank() && tasks.isNotEmpty()
+
+    val previewStartMinutes: Int
+        get() = ((departureMinutes - tasks.sumOf { it.minutes }) % 1440 + 1440) % 1440
 }
 
 data class SessionState(
@@ -122,6 +125,15 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         }
     }
 
+    fun updateTask(index: Int, name: String, minutes: Int) {
+        _editor.value?.let { editor ->
+            if (name.isBlank() || minutes <= 0 || index !in editor.tasks.indices) return
+            val tasks = editor.tasks.toMutableList()
+            tasks[index] = tasks[index].copy(name = name.trim(), minutes = minutes)
+            _editor.value = editor.copy(tasks = tasks)
+        }
+    }
+
     fun removeTask(index: Int) {
         _editor.value?.let { editor ->
             _editor.value = editor.copy(tasks = editor.tasks.filterIndexed { i, _ -> i != index })
@@ -154,6 +166,19 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
             )
             _editor.value = null
         }
+    }
+
+    fun startTemporary() {
+        val editor = _editor.value ?: return
+        if (!editor.isValid) return
+        val routine = Routine(
+            id = -1L,
+            name = editor.name.trim(),
+            departureMinutes = editor.departureMinutes,
+            tasks = editor.tasks,
+        )
+        _editor.value = null
+        startSession(routine)
     }
 
     fun deleteRoutine(routine: Routine) {

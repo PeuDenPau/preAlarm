@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">preAlarm</string>
+
+    <string name="home_title">Wann gehst du los?</string>
+    <string name="home_empty_title">Noch keine Routinen</string>
+    <string name="home_empty_text">Erstelle deine erste Routine mit den Aufgaben, die du vor dem Losgehen erledigst.</string>
+    <string name="new_routine">Neue Routine</string>
+    <string name="exact_alarm_banner">Damit Hinweise zur exakten Zeit klingen, erlaube genaue Alarme in den Einstellungen.</string>
+    <string name="open_settings">Einstellungen öffnen</string>
+
+    <string name="play_routine">Starten</string>
+    <string name="delete_routine">Löschen</string>
+    <string name="edit_routine">Bearbeiten</string>
+
+    <string name="editor_new_title">Neue Routine</string>
+    <string name="editor_edit_title">Routine bearbeiten</string>
+    <string name="routine_name_label">Name der Routine</string>
+    <string name="departure_time_label">Abfahrtszeit</string>
+    <string name="departure_time_value">Ich gehe um %1$s</string>
+    <string name="change_time">Zeit ändern</string>
+    <string name="tasks_section">Aufgaben, in Reihenfolge</string>
+    <string name="task_name_hint">Neue Aufgabe</string>
+    <string name="minutes_hint">Min.</string>
+    <string name="task_minutes_value">%1$d Min.</string>
+    <string name="add_task">Aufgabe hinzufügen</string>
+    <string name="move_up">Nach oben</string>
+    <string name="move_down">Nach unten</string>
+    <string name="remove_task">Entfernen</string>
+    <string name="save">Speichern</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="ok">OK</string>
+    <string name="pick_time_title">Abfahrtszeit</string>
+    <string name="total_summary">%1$d Min. Vorbereitung · %2$d Aufgaben</string>
+    <string name="editor_needs_name">Gib der Routine einen Namen</string>
+    <string name="editor_needs_tasks">Füge mindestens eine Aufgabe hinzu</string>
+    <string name="start_preview">Du würdest um %1$s beginnen</string>
+    <string name="start_without_saving">Starten ohne Speichern</string>
+    <string name="edit_task">Aufgabe bearbeiten</string>
+
+    <string name="help">Hilfe</string>
+    <string name="help_title">So funktioniert es</string>
+    <string name="help_body">1. Erstelle eine Routine mit den Aufgaben, die du vor dem Losgehen erledigst, und wie lange jede dauert.\n2. Tippe auf „Starten“: die App berechnet, wann du beginnen musst, und plant die Hinweise.\n3. Am Ende jedes Zeitabschnitts ertönt ein kurzer Hinweis. Nichts muss weggeklickt werden.\n4. Tippe nach jeder Aufgabe auf „Erledigt!“, damit die App sagt, ob du in der Zeit, vor der Zeit oder in Verzug bist.\n\nTipp: Mit „Starten ohne Speichern“ kannst du eine Routine einmal ausprobieren, ohne sie zu behalten.</string>
+
+    <string name="session_leaving_at">Du gehst um %1$s</string>
+    <string name="session_departure_in">Losgehen in %1$s</string>
+    <string name="session_current_task">Jetzt dran</string>
+    <string name="session_done_button">Erledigt!</string>
+    <string name="session_next_up">Danach: %1$s</string>
+    <string name="session_on_time">Du bist in der Zeit</string>
+    <string name="session_behind">Du bist %1$s in Verzug</string>
+    <string name="session_ahead">Du bist %1$s vor der Zeit</string>
+    <string name="session_all_done_title">Alles fertig!</string>
+    <string name="session_all_done_text">Du kannst losgehen. Du hast %1$s übrig.</string>
+    <string name="session_all_done_late_text">Du gehst %1$s zu spät. Beeil dich!</string>
+    <string name="session_overshoot">+%1$s mehr</string>
+    <string name="session_remaining_left">%1$s übrig</string>
+    <string name="session_stop">Beenden</string>
+    <string name="session_stop_confirm_title">Sitzung beenden?</string>
+    <string name="session_stop_confirm_text">Ausstehende Hinweise werden abgebrochen.</string>
+    <string name="session_task_done_at">Fertig um %1$s</string>
+
+    <string name="notify_channel_name">Routine-Hinweise</string>
+    <string name="notify_start_title">Starte deine Routine</string>
+    <string name="notify_start_text">Zeit zu beginnen: %1$s (%2$d Min.)</string>
+    <string name="notify_task_end_title">Zeit ist um</string>
+    <string name="notify_task_end_text">„%1$s“ ist vorbei. Tippe auf „Erledigt!“, wenn du kannst.</string>
+    <string name="notify_departure_title">Es ist so weit!</string>
+    <string name="notify_departure_text">Zeit zu gehen. Einen schönen Tag!</string>
+</resources>

@@ -1,7 +1,6 @@
 package com.peudenhau.prealarm.ui.screens
 
 import android.Manifest
-import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -10,6 +9,7 @@ import android.provider.Settings
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -26,14 +26,15 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.outlined.Alarm
 import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.HelpOutline
 import androidx.compose.material.icons.outlined.Schedule
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -54,6 +55,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import com.peudenhau.prealarm.R
 import com.peudenhau.prealarm.data.Routine
+import com.peudenhau.prealarm.ui.CuteBackground
 import com.peudenhau.prealarm.ui.formatMinutesOfDay
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -68,6 +70,7 @@ fun HomeScreen(
 ) {
     val context = LocalContext.current
     var pendingRoutine by remember { mutableStateOf<Routine?>(null) }
+    var showHelp by remember { mutableStateOf(false) }
     val permissionLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) { _ ->
@@ -89,43 +92,81 @@ fun HomeScreen(
 
     Scaffold(
         topBar = {
-            CenterAlignedTopAppBar(title = { Text(stringResource(R.string.app_name)) })
-        },
-        floatingActionButton = {
-            ExtendedFloatingActionButton(
-                onClick = { onEdit(null) },
-                icon = { Icon(Icons.Default.Add, contentDescription = null) },
-                text = { Text(stringResource(R.string.new_routine)) },
+            CenterAlignedTopAppBar(
+                title = { Text(stringResource(R.string.app_name)) },
+                actions = {
+                    IconButton(onClick = { showHelp = true }) {
+                        Icon(
+                            Icons.Outlined.HelpOutline,
+                            contentDescription = stringResource(R.string.help),
+                        )
+                    }
+                },
             )
         },
     ) { padding ->
-        Column(
+        Box(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
         ) {
-            if (!canScheduleExact && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                ExactAlarmBanner()
-            }
-            if (routines.isEmpty()) {
-                EmptyState()
-            } else {
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp),
+            CuteBackground()
+            Column(
+                modifier = Modifier.fillMaxSize(),
+            ) {
+                Button(
+                    onClick = { onEdit(null) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp)
+                        .height(56.dp),
+                    shape = MaterialTheme.shapes.large,
                 ) {
-                    items(routines, key = { it.id }) { routine ->
-                        RoutineCard(
-                            routine = routine,
-                            onStart = { start(routine) },
-                            onEdit = { onEdit(routine) },
-                            onDelete = { onDelete(routine) },
-                        )
+                    Icon(Icons.Default.Add, contentDescription = null)
+                    Spacer(Modifier.size(6.dp))
+                    Text(stringResource(R.string.new_routine), style = MaterialTheme.typography.titleMedium)
+                }
+                if (!canScheduleExact && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                    ExactAlarmBanner()
+                }
+                if (routines.isEmpty()) {
+                    EmptyState()
+                } else {
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        contentPadding = PaddingValues(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(12.dp),
+                    ) {
+                        items(routines, key = { it.id }) { routine ->
+                            RoutineCard(
+                                routine = routine,
+                                onStart = { start(routine) },
+                                onEdit = { onEdit(routine) },
+                                onDelete = { onDelete(routine) },
+                            )
+                        }
                     }
                 }
             }
         }
+    }
+
+    if (showHelp) {
+        AlertDialog(
+            onDismissRequest = { showHelp = false },
+            title = { Text(stringResource(R.string.help_title)) },
+            text = {
+                Text(
+                    stringResource(R.string.help_body),
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = { showHelp = false }) {
+                    Text(stringResource(R.string.ok))
+                }
+            },
+        )
     }
 }
 

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">preAlarm</string>
+
+    <string name="home_title">何時に出かける？</string>
+    <string name="home_empty_title">ルーティンはまだありません</string>
+    <string name="home_empty_text">出かける前にやることと、それぞれにかかる時間を入れて最初のルーティンを作りましょう。</string>
+    <string name="new_routine">新しいルーティン</string>
+    <string name="exact_alarm_banner">通知を正確な時刻に鳴らすには、設定で正確なアラームを許可してください。</string>
+    <string name="open_settings">設定を開く</string>
+
+    <string name="play_routine">開始</string>
+    <string name="delete_routine">削除</string>
+    <string name="edit_routine">編集</string>
+
+    <string name="editor_new_title">新しいルーティン</string>
+    <string name="editor_edit_title">ルーティンを編集</string>
+    <string name="routine_name_label">ルーティン名</string>
+    <string name="departure_time_label">出発時刻</string>
+    <string name="departure_time_value">%1$s に出発</string>
+    <string name="change_time">時刻を変更</string>
+    <string name="tasks_section">タスク（順番通りに）</string>
+    <string name="task_name_hint">新しいタスク</string>
+    <string name="minutes_hint">分</string>
+    <string name="task_minutes_value">%1$d 分</string>
+    <string name="add_task">タスクを追加</string>
+    <string name="move_up">上へ</string>
+    <string name="move_down">下へ</string>
+    <string name="remove_task">削除</string>
+    <string name="save">保存</string>
+    <string name="cancel">キャンセル</string>
+    <string name="ok">OK</string>
+    <string name="pick_time_title">出発時刻</string>
+    <string name="total_summary">準備 %1$d 分 ・ タスク %2$d 件</string>
+    <string name="editor_needs_name">ルーティンに名前を付けましょう</string>
+    <string name="editor_needs_tasks">タスクを 1 つ以上追加してください</string>
+    <string name="start_preview">開始時刻は %1$s の見込み</string>
+    <string name="start_without_saving">保存せずに開始</string>
+    <string name="edit_task">タスクを編集</string>
+
+    <string name="help">ヘルプ</string>
+    <string name="help_title">使い方</string>
+    <string name="help_body">1. 出かける前にやることと、それぞれの所要時間を入れてルーティンを作ります。\n2. 「開始」をタップすると、アプリが開始時刻を計算して通知を予約します。\n3. 各時間帯が終わると短い音が鳴ります。解除する必要はありません。\n4. タスクが終わったら「完了！」をタップ。時間どおりか、先行しているか、遅れているかをアプリが教えてくれます。\n\nヒント: 「保存せずに開始」を使うと、保存せずに 1 回だけルーティンを試せます。</string>
+
+    <string name="session_leaving_at">%1$s に出発</string>
+    <string name="session_departure_in">出発まで %1$s</string>
+    <string name="session_current_task">いまはこれ</string>
+    <string name="session_done_button">完了！</string>
+    <string name="session_next_up">次: %1$s</string>
+    <string name="session_on_time">時間どおり</string>
+    <string name="session_behind">%1$s 遅れ</string>
+    <string name="session_ahead">%1$s 先行</string>
+    <string name="session_all_done_title">全部完了！</string>
+    <string name="session_all_done_text">出かけられます。%1$s の余裕があります。</string>
+    <string name="session_all_done_late_text">%1$s の遅れです。急いで！</string>
+    <string name="session_overshoot">+%1$s 超過</string>
+    <string name="session_remaining_left">残り %1$s</string>
+    <string name="session_stop">終了</string>
+    <string name="session_stop_confirm_title">セッションを終了しますか？</string>
+    <string name="session_stop_confirm_text">予定されていた通知はキャンセルされます。</string>
+    <string name="session_task_done_at">%1$s に完了</string>
+
+    <string name="notify_channel_name">ルーティンの通知</string>
+    <string name="notify_start_title">ルーティン開始</string>
+    <string name="notify_start_text">そろそろ開始: %1$s（%2$d 分）</string>
+    <string name="notify_task_end_title">時間になりました</string>
+    <string name="notify_task_end_text">「%1$s」が終わりました。できたら「完了！」をタップ。</string>
+    <string name="notify_departure_title">出発の時間！</string>
+    <string name="notify_departure_text">出かける時間です。良い一日を！</string>
+</resources>
