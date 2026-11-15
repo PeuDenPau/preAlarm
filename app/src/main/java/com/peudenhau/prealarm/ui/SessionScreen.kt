@@ -211,6 +211,7 @@ private fun CurrentTaskCard(session: SessionState, now: Long, onMarkDone: () -> 
                     formatDuration(remainingMs),
                     fontSize = 56.sp,
                     fontWeight = FontWeight.Bold,
+                    fontFamily = PlayfulFamily,
                     color = MaterialTheme.colorScheme.onPrimaryContainer,
                 )
             } else {

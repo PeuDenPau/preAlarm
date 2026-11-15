@@ -32,6 +32,7 @@ Material 3 (Material You): color dinámico del sistema en Android 12+, tema clar
 - Alarmas exactas con `SCHEDULE_EXACT_ALARM` (API 31–32) / `USE_EXACT_ALARM` (API 33+), con degradación a alarmas inexactas si no hay permiso.
 - Ajustes: idioma por app, tema (sistema/claro/oscuro), colores dinámicos, sonido del aviso con previsualización, canal de audio (alarma o multimedia) y vibración.
 - 8 idiomas: inglés (por defecto), español, català, Deutsch, français, italiano, 日本語, 中文.
+- Tipografía del título: [Baloo 2](https://fonts.google.com/specimen/Baloo+2) (SIL OFL).
 - APK release con R8: ~2 MB.
 
 ## Compilar

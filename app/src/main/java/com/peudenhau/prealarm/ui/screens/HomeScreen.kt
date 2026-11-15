@@ -57,6 +57,7 @@ import androidx.core.content.ContextCompat
 import com.peudenhau.prealarm.R
 import com.peudenhau.prealarm.data.Routine
 import com.peudenhau.prealarm.ui.CuteBackground
+import com.peudenhau.prealarm.ui.PreAlarmTitle
 import com.peudenhau.prealarm.ui.formatMinutesOfDay
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -95,7 +96,7 @@ fun HomeScreen(
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text(stringResource(R.string.app_name)) },
+                title = { PreAlarmTitle() },
                 actions = {
                     IconButton(onClick = onOpenSettings) {
                         Icon(
@@ -122,11 +123,6 @@ fun HomeScreen(
             Column(
                 modifier = Modifier.fillMaxSize(),
             ) {
-                Text(
-                    text = stringResource(R.string.home_title),
-                    style = MaterialTheme.typography.headlineSmall,
-                    modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp),
-                )
                 Button(
                     onClick = { onEdit(null) },
                     modifier = Modifier
