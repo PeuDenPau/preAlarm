@@ -1,0 +1,37 @@
+package com.peudenhau.prealarm.ui.theme
+
+import androidx.compose.ui.graphics.Color
+
+val TealPrimary = Color(0xFF00696E)
+val TealOnPrimary = Color(0xFFFFFFFF)
+val TealContainer = Color(0xFF9CF1F6)
+val TealOnContainer = Color(0xFF002022)
+val CoralSecondary = Color(0xFF7A5900)
+val CoralContainer = Color(0xFFFFE08D)
+val CoralOnContainer = Color(0xFF251A00)
+val WarmBackground = Color(0xFFFBFDF9)
+val WarmOnBackground = Color(0xFF191C1C)
+val WarmSurface = Color(0xFFF4FAF7)
+val WarmOnSurface = Color(0xFF191C1C)
+val WarmSurfaceVariant = Color(0xFFDAE4E1)
+val WarmOnSurfaceVariant = Color(0xFF3F4947)
+
+val DarkTealPrimary = Color(0xFF80D4DA)
+val DarkTealOnPrimary = Color(0xFF003739)
+val DarkTealContainer = Color(0xFF004F53)
+val DarkTealOnContainer = Color(0xFF9CF1F6)
+val DarkCoralSecondary = Color(0xFFEBC74A)
+val DarkCoralContainer = Color(0xFF5C4300)
+val DarkCoralOnContainer = Color(0xFFFFE08D)
+val DarkBackground = Color(0xFF191C1C)
+val DarkOnBackground = Color(0xFFE0E3E1)
+val DarkSurface = Color(0xFF101413)
+val DarkOnSurface = Color(0xFFE0E3E1)
+val DarkSurfaceVariant = Color(0xFF3F4947)
+val DarkOnSurfaceVariant = Color(0xFFBEC9C6)
+
+val SuccessGreen = Color(0xFF2E6B34)
+val SuccessGreenDark = Color(0xFF9CD67F)
+val WarningAmber = Color(0xFF8A5300)
+val WarningAmberDark = Color(0xFFFFB95C)
+val ErrorRed = Color(0xFFBA1A1A)
