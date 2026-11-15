@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">preAlarm</string>
 
-    <string name="home_title">What time do you leave?</string>
+    <string name="home_title">What time are you leaving? ⏰</string>
     <string name="home_empty_title">No routines yet</string>
     <string name="home_empty_text">Create your first routine with the things you do before leaving home.</string>
     <string name="new_routine">New routine</string>
@@ -67,4 +67,23 @@
     <string name="notify_task_end_text">«%1$s» is over. Mark Done! when you can.</string>
     <string name="notify_departure_title">It\'s time!</string>
     <string name="notify_departure_text">Time to leave home. Have a great day!</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_language">Language</string>
+    <string name="language_system">System language</string>
+    <string name="settings_theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="settings_dynamic_colors">Dynamic colors</string>
+    <string name="settings_dynamic_colors_desc">Use the system Material You colors (Android 12+)</string>
+    <string name="settings_sound">Alert sound</string>
+    <string name="settings_sound_default">Default alarm sound</string>
+    <string name="change_sound">Change</string>
+    <string name="preview_sound">Preview</string>
+    <string name="settings_channel">Alert channel</string>
+    <string name="settings_channel_desc">Play the alert with the alarm volume or the media volume</string>
+    <string name="channel_alarm">Alarm</string>
+    <string name="channel_media">Media</string>
+    <string name="settings_vibrate">Vibration</string>
+    <string name="settings_vibrate_desc">Vibrate with each alert</string>
 </resources>

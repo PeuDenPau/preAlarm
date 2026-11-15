@@ -28,8 +28,11 @@ class AlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         val title = intent.getStringExtra(AlarmScheduler.EXTRA_TITLE) ?: context.getString(R.string.app_name)
         val text = intent.getStringExtra(AlarmScheduler.EXTRA_TEXT).orEmpty()
+        val soundUri = intent.getStringExtra(AlarmScheduler.EXTRA_SOUND_URI).orEmpty()
+        val channel = intent.getStringExtra(AlarmScheduler.EXTRA_CHANNEL) ?: "ALARM"
+        val vibrate = intent.getBooleanExtra(AlarmScheduler.EXTRA_VIBRATE, true)
         showNotification(context, title, text)
-        playAlert(context)
+        playAlert(context, soundUri, channel, vibrate)
     }
 
     private fun showNotification(context: Context, title: String, text: String) {
@@ -61,13 +64,22 @@ class AlarmReceiver : BroadcastReceiver() {
         manager.notify(title.hashCode(), notification)
     }
 
-    private fun playAlert(context: Context) {
-        val uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
-            ?: RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+    private fun playAlert(context: Context, soundUri: String, channel: String, vibrate: Boolean) {
+        val usage = if (channel == "MEDIA") {
+            AudioAttributes.USAGE_MEDIA
+        } else {
+            AudioAttributes.USAGE_ALARM
+        }
+        val uri = if (soundUri.isBlank()) {
+            RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM)
+                ?: RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+        } else {
+            android.net.Uri.parse(soundUri)
+        }
         val ringtone = RingtoneManager.getRingtone(context, uri)
         if (ringtone != null) {
             ringtone.audioAttributes = AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_ALARM)
+                .setUsage(usage)
                 .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                 .build()
             ringtone.play()
@@ -75,16 +87,18 @@ class AlarmReceiver : BroadcastReceiver() {
                 runCatching { if (ringtone.isPlaying) ringtone.stop() }
             }, ALERT_DURATION_MS)
         }
-        val vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            (context.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as? VibratorManager)?.defaultVibrator
-        } else {
-            @Suppress("DEPRECATION")
-            context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
-        }
-        if (vibrator != null && vibrator.hasVibrator()) {
-            vibrator.vibrate(
-                VibrationEffect.createWaveform(longArrayOf(0, 250, 200, 250, 200, 250), -1)
-            )
+        if (vibrate) {
+            val vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                (context.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as? VibratorManager)?.defaultVibrator
+            } else {
+                @Suppress("DEPRECATION")
+                context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
+            }
+            if (vibrator != null && vibrator.hasVibrator()) {
+                vibrator.vibrate(
+                    VibrationEffect.createWaveform(longArrayOf(0, 250, 200, 250, 200, 250), -1)
+                )
+            }
         }
     }
 }

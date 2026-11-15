@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">preAlarm</string>
 
-    <string name="home_title">A che ora esci?</string>
+    <string name="home_title">A che ora esci? ⏰</string>
     <string name="home_empty_title">Ancora nessuna routine</string>
     <string name="home_empty_text">Crea la tua prima routine con le cose che fai prima di uscire di casa.</string>
     <string name="new_routine">Nuova routine</string>
@@ -67,4 +67,23 @@
     <string name="notify_task_end_text">«%1$s» è terminata. Tocca «Fatto!» quando puoi.</string>
     <string name="notify_departure_title">È l\'ora!</string>
     <string name="notify_departure_text">È ora di uscire. Buona giornata!</string>
+    <string name="settings_title">Impostazioni</string>
+    <string name="settings_language">Lingua</string>
+    <string name="language_system">Lingua di sistema</string>
+    <string name="settings_theme">Tema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Chiaro</string>
+    <string name="theme_dark">Scuro</string>
+    <string name="settings_dynamic_colors">Colori dinamici</string>
+    <string name="settings_dynamic_colors_desc">Usa i colori Material You del sistema (Android 12+)</string>
+    <string name="settings_sound">Suono dell\'avviso</string>
+    <string name="settings_sound_default">Suono sveglia predefinito</string>
+    <string name="change_sound">Cambia</string>
+    <string name="preview_sound">Anteprima</string>
+    <string name="settings_channel">Canale dell\'avviso</string>
+    <string name="settings_channel_desc">Riproduce l\'avviso con il volume sveglia o quello multimedia</string>
+    <string name="channel_alarm">Sveglia</string>
+    <string name="channel_media">Multimedia</string>
+    <string name="settings_vibrate">Vibrazione</string>
+    <string name="settings_vibrate_desc">Vibra a ogni avviso</string>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">preAlarm</string>
 
-    <string name="home_title">你几点出门？</string>
+    <string name="home_title">今天几点出门？ ⏰</string>
     <string name="home_empty_title">还没有日常流程</string>
     <string name="home_empty_text">创建你的第一个流程，加入出门前要做的事和每件事所需的时间。</string>
     <string name="new_routine">新建流程</string>
@@ -67,4 +67,23 @@
     <string name="notify_task_end_text">「%1$s」时间到。方便时点按「完成！」。</string>
     <string name="notify_departure_title">该出发了！</string>
     <string name="notify_departure_text">该出门啦，祝你一天顺利！</string>
+    <string name="settings_title">设置</string>
+    <string name="settings_language">语言</string>
+    <string name="language_system">跟随系统语言</string>
+    <string name="settings_theme">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="settings_dynamic_colors">动态取色</string>
+    <string name="settings_dynamic_colors_desc">使用系统的 Material You 取色（Android 12+）</string>
+    <string name="settings_sound">提醒铃声</string>
+    <string name="settings_sound_default">默认闹钟铃声</string>
+    <string name="change_sound">更改</string>
+    <string name="preview_sound">试听</string>
+    <string name="settings_channel">提醒声道</string>
+    <string name="settings_channel_desc">选择提醒使用闹钟音量还是媒体音量</string>
+    <string name="channel_alarm">闹钟</string>
+    <string name="channel_media">媒体</string>
+    <string name="settings_vibrate">振动</string>
+    <string name="settings_vibrate_desc">每次提醒时振动</string>
 </resources>

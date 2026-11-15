@@ -16,6 +16,9 @@ class AlarmScheduler(private val context: Context) {
         const val ACTION_DEPARTURE = "com.peudenhau.prealarm.action.DEPARTURE"
         const val EXTRA_TITLE = "extra_title"
         const val EXTRA_TEXT = "extra_text"
+        const val EXTRA_SOUND_URI = "extra_sound_uri"
+        const val EXTRA_CHANNEL = "extra_channel"
+        const val EXTRA_VIBRATE = "extra_vibrate"
 
         private const val RC_START = 1
         private const val RC_DEPARTURE = 2
@@ -33,13 +36,19 @@ class AlarmScheduler(private val context: Context) {
         startText: String,
         taskEndText: (Int) -> String,
         departureText: String,
+        soundUri: String = "",
+        soundChannel: String = "ALARM",
+        vibrate: Boolean = true,
     ) {
         setExact(
             RC_START,
             plan.startEpochMs,
             baseIntent(ACTION_START)
                 .putExtra(EXTRA_TITLE, context.getString(R.string.notify_start_title))
-                .putExtra(EXTRA_TEXT, startText),
+                .putExtra(EXTRA_TEXT, startText)
+                .putExtra(EXTRA_SOUND_URI, soundUri)
+                .putExtra(EXTRA_CHANNEL, soundChannel)
+                .putExtra(EXTRA_VIBRATE, vibrate),
         )
         plan.tasks.forEachIndexed { index, taskPlan ->
             setExact(
@@ -47,7 +56,10 @@ class AlarmScheduler(private val context: Context) {
                 taskPlan.plannedEndEpochMs,
                 baseIntent(ACTION_TASK_END)
                     .putExtra(EXTRA_TITLE, context.getString(R.string.notify_task_end_title))
-                    .putExtra(EXTRA_TEXT, taskEndText(index)),
+                    .putExtra(EXTRA_TEXT, taskEndText(index))
+                    .putExtra(EXTRA_SOUND_URI, soundUri)
+                    .putExtra(EXTRA_CHANNEL, soundChannel)
+                    .putExtra(EXTRA_VIBRATE, vibrate),
             )
         }
         setExact(
@@ -55,7 +67,10 @@ class AlarmScheduler(private val context: Context) {
             plan.departureEpochMs,
             baseIntent(ACTION_DEPARTURE)
                 .putExtra(EXTRA_TITLE, context.getString(R.string.notify_departure_title))
-                .putExtra(EXTRA_TEXT, departureText),
+                .putExtra(EXTRA_TEXT, departureText)
+                .putExtra(EXTRA_SOUND_URI, soundUri)
+                .putExtra(EXTRA_CHANNEL, soundChannel)
+                .putExtra(EXTRA_VIBRATE, vibrate),
         )
     }
 

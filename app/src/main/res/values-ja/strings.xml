@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">preAlarm</string>
 
-    <string name="home_title">何時に出かける？</string>
+    <string name="home_title">今日は何時に出かける？ ⏰</string>
     <string name="home_empty_title">ルーティンはまだありません</string>
     <string name="home_empty_text">出かける前にやることと、それぞれにかかる時間を入れて最初のルーティンを作りましょう。</string>
     <string name="new_routine">新しいルーティン</string>
@@ -67,4 +67,23 @@
     <string name="notify_task_end_text">「%1$s」が終わりました。できたら「完了！」をタップ。</string>
     <string name="notify_departure_title">出発の時間！</string>
     <string name="notify_departure_text">出かける時間です。良い一日を！</string>
+    <string name="settings_title">設定</string>
+    <string name="settings_language">言語</string>
+    <string name="language_system">システムの言語</string>
+    <string name="settings_theme">テーマ</string>
+    <string name="theme_system">システム</string>
+    <string name="theme_light">ライト</string>
+    <string name="theme_dark">ダーク</string>
+    <string name="settings_dynamic_colors">ダイナミックカラー</string>
+    <string name="settings_dynamic_colors_desc">システムの Material You カラーを使用します（Android 12 以上）</string>
+    <string name="settings_sound">通知音</string>
+    <string name="settings_sound_default">デフォルトのアラーム音</string>
+    <string name="change_sound">変更</string>
+    <string name="preview_sound">試聴</string>
+    <string name="settings_channel">通知のチャネル</string>
+    <string name="settings_channel_desc">アラーム音量とメディア音量のどちらで鳴らすかを選べます</string>
+    <string name="channel_alarm">アラーム</string>
+    <string name="channel_media">メディア</string>
+    <string name="settings_vibrate">バイブレーション</string>
+    <string name="settings_vibrate_desc">通知ごとに振動します</string>
 </resources>

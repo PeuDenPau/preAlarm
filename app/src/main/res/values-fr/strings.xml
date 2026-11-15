@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">preAlarm</string>
 
-    <string name="home_title">À quelle heure pars-tu ?</string>
+    <string name="home_title">Tu pars à quelle heure ? ⏰</string>
     <string name="home_empty_title">Pas encore de routine</string>
     <string name="home_empty_text">Crée ta première routine avec les tâches que tu fais avant de partir.</string>
     <string name="new_routine">Nouvelle routine</string>
@@ -67,4 +67,23 @@
     <string name="notify_task_end_text">« %1$s » est terminé. Marque « Fini ! » quand tu peux.</string>
     <string name="notify_departure_title">C\'est l\'heure !</string>
     <string name="notify_departure_text">Il est temps de partir. Bonne journée !</string>
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_language">Langue</string>
+    <string name="language_system">Langue du système</string>
+    <string name="settings_theme">Thème</string>
+    <string name="theme_system">Système</string>
+    <string name="theme_light">Clair</string>
+    <string name="theme_dark">Sombre</string>
+    <string name="settings_dynamic_colors">Couleurs dynamiques</string>
+    <string name="settings_dynamic_colors_desc">Utilise les couleurs Material You du système (Android 12+)</string>
+    <string name="settings_sound">Son de l\'alerte</string>
+    <string name="settings_sound_default">Son d\'alarme par défaut</string>
+    <string name="change_sound">Changer</string>
+    <string name="preview_sound">Écouter</string>
+    <string name="settings_channel">Canal de l\'alerte</string>
+    <string name="settings_channel_desc">Joue l\'alerte avec le volume alarme ou le volume multimédia</string>
+    <string name="channel_alarm">Alarme</string>
+    <string name="channel_media">Multimédia</string>
+    <string name="settings_vibrate">Vibration</string>
+    <string name="settings_vibrate_desc">Vibrer à chaque alerte</string>
 </resources>

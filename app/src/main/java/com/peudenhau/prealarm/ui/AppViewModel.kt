@@ -9,9 +9,13 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import com.peudenhau.prealarm.PreAlarmApplication
 import com.peudenhau.prealarm.R
 import com.peudenhau.prealarm.alarm.AlarmScheduler
+import com.peudenhau.prealarm.data.AppSettings
 import com.peudenhau.prealarm.data.PreTask
 import com.peudenhau.prealarm.data.Routine
 import com.peudenhau.prealarm.data.RoutineRepository
+import com.peudenhau.prealarm.data.SettingsRepository
+import com.peudenhau.prealarm.data.SoundChannel
+import com.peudenhau.prealarm.data.ThemeMode
 import com.peudenhau.prealarm.schedule.ScheduleCalculator
 import com.peudenhau.prealarm.schedule.SessionPlan
 import kotlinx.coroutines.delay
@@ -58,6 +62,7 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     private val repository = (app as PreAlarmApplication).repository
+    private val settingsRepository = (app as PreAlarmApplication).settingsRepository
     private val scheduler = (app as PreAlarmApplication).scheduler
 
     val routines: StateFlow<List<Routine>> = repository.routines
@@ -72,6 +77,12 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     private val _now = MutableStateFlow(System.currentTimeMillis())
     val now: StateFlow<Long> = _now.asStateFlow()
 
+    val settings: StateFlow<AppSettings> = settingsRepository.settings
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), AppSettings())
+
+    private val _settingsOpen = MutableStateFlow(false)
+    val settingsOpen: StateFlow<Boolean> = _settingsOpen.asStateFlow()
+
     init {
         viewModelScope.launch {
             while (isActive) {
@@ -82,6 +93,34 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     fun canScheduleExact(): Boolean = scheduler.canScheduleExact()
+
+    fun openSettings() {
+        _settingsOpen.value = true
+    }
+
+    fun closeSettings() {
+        _settingsOpen.value = false
+    }
+
+    fun setThemeMode(mode: ThemeMode) {
+        viewModelScope.launch { settingsRepository.setThemeMode(mode) }
+    }
+
+    fun setDynamicColor(enabled: Boolean) {
+        viewModelScope.launch { settingsRepository.setDynamicColor(enabled) }
+    }
+
+    fun setSound(uri: String, title: String) {
+        viewModelScope.launch { settingsRepository.setSound(uri, title) }
+    }
+
+    fun setSoundChannel(channel: SoundChannel) {
+        viewModelScope.launch { settingsRepository.setSoundChannel(channel) }
+    }
+
+    fun setVibrate(enabled: Boolean) {
+        viewModelScope.launch { settingsRepository.setVibrate(enabled) }
+    }
 
     fun openEditor(routine: Routine?) {
         _editor.value = if (routine == null) {
@@ -193,11 +232,15 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
         scheduler.cancelSession()
         val context = getApplication<Application>()
         val first = plan.tasks.first()
+        val currentSettings = settings.value
         scheduler.scheduleSession(
             plan = plan,
             startText = context.getString(R.string.notify_start_text, first.task.name, first.task.minutes),
             taskEndText = { index -> context.getString(R.string.notify_task_end_text, plan.tasks[index].task.name) },
             departureText = context.getString(R.string.notify_departure_text),
+            soundUri = currentSettings.soundUri,
+            soundChannel = currentSettings.soundChannel.name,
+            vibrate = currentSettings.vibrate,
         )
         _session.value = SessionState(
             routine = routine,

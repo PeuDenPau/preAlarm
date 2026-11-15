@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">preAlarm</string>
 
-    <string name="home_title">¿A qué hora sales?</string>
+    <string name="home_title">¿A qué hora sales? ⏰</string>
     <string name="home_empty_title">Aún no hay rutinas</string>
     <string name="home_empty_text">Crea tu primera rutina con las tareas que haces antes de salir de casa.</string>
     <string name="new_routine">Nueva rutina</string>
@@ -67,4 +67,23 @@
     <string name="notify_task_end_text">«%1$s» terminó. Marca «¡Hecho!» cuando puedas.</string>
     <string name="notify_departure_title">¡Es la hora!</string>
     <string name="notify_departure_text">Toca salir de casa. ¡Buen día!</string>
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_language">Idioma</string>
+    <string name="language_system">Idioma del sistema</string>
+    <string name="settings_theme">Tema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="settings_dynamic_colors">Colores dinámicos</string>
+    <string name="settings_dynamic_colors_desc">Usa los colores Material You del sistema (Android 12+)</string>
+    <string name="settings_sound">Sonido del aviso</string>
+    <string name="settings_sound_default">Sonido de alarma por defecto</string>
+    <string name="change_sound">Cambiar</string>
+    <string name="preview_sound">Probar</string>
+    <string name="settings_channel">Canal del aviso</string>
+    <string name="settings_channel_desc">Elige si el aviso suena con el volumen de alarma o de multimedia</string>
+    <string name="channel_alarm">Alarma</string>
+    <string name="channel_media">Multimedia</string>
+    <string name="settings_vibrate">Vibración</string>
+    <string name="settings_vibrate_desc">Vibrar con cada aviso</string>
 </resources>

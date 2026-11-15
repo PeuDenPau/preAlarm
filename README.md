@@ -30,7 +30,9 @@ Material 3 (Material You): color dinámico del sistema en Android 12+, tema clar
 - MVVM ligero: un `ViewModel` + `StateFlow`, sin inyección de dependencias.
 - Persistencia con DataStore Preferences + kotlinx.serialization (sin base de datos).
 - Alarmas exactas con `SCHEDULE_EXACT_ALARM` (API 31–32) / `USE_EXACT_ALARM` (API 33+), con degradación a alarmas inexactas si no hay permiso.
-- APK release con R8: ~1,4 MB.
+- Ajustes: idioma por app, tema (sistema/claro/oscuro), colores dinámicos, sonido del aviso con previsualización, canal de audio (alarma o multimedia) y vibración.
+- 8 idiomas: inglés (por defecto), español, català, Deutsch, français, italiano, 日本語, 中文.
+- APK release con R8: ~2 MB.
 
 ## Compilar
 

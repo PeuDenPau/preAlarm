@@ -28,6 +28,7 @@ import androidx.compose.material.icons.outlined.Alarm
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.HelpOutline
 import androidx.compose.material.icons.outlined.Schedule
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -67,6 +68,7 @@ fun HomeScreen(
     onStart: (Routine) -> Unit,
     onEdit: (Routine?) -> Unit,
     onDelete: (Routine) -> Unit,
+    onOpenSettings: () -> Unit,
 ) {
     val context = LocalContext.current
     var pendingRoutine by remember { mutableStateOf<Routine?>(null) }
@@ -95,6 +97,12 @@ fun HomeScreen(
             CenterAlignedTopAppBar(
                 title = { Text(stringResource(R.string.app_name)) },
                 actions = {
+                    IconButton(onClick = onOpenSettings) {
+                        Icon(
+                            Icons.Outlined.Settings,
+                            contentDescription = stringResource(R.string.settings_title),
+                        )
+                    }
                     IconButton(onClick = { showHelp = true }) {
                         Icon(
                             Icons.Outlined.HelpOutline,
@@ -114,6 +122,11 @@ fun HomeScreen(
             Column(
                 modifier = Modifier.fillMaxSize(),
             ) {
+                Text(
+                    text = stringResource(R.string.home_title),
+                    style = MaterialTheme.typography.headlineSmall,
+                    modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp),
+                )
                 Button(
                     onClick = { onEdit(null) },
                     modifier = Modifier

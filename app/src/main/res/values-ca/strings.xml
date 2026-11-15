@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">preAlarm</string>
 
-    <string name="home_title">A quina hora surts?</string>
+    <string name="home_title">A quina hora surts? ⏰</string>
     <string name="home_empty_title">Encara no hi ha rutines</string>
     <string name="home_empty_text">Crea la teva primera rutina amb les tasques que fas abans de sortir de casa.</string>
     <string name="new_routine">Nova rutina</string>
@@ -67,4 +67,23 @@
     <string name="notify_task_end_text">«%1$s» ha acabat. Marca «Fet!» quan puguis.</string>
     <string name="notify_departure_title">És l\'hora!</string>
     <string name="notify_departure_text">Toca sortir de casa. Bon dia!</string>
+    <string name="settings_title">Ajustos</string>
+    <string name="settings_language">Idioma</string>
+    <string name="language_system">Idioma del sistema</string>
+    <string name="settings_theme">Tema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Clar</string>
+    <string name="theme_dark">Fosc</string>
+    <string name="settings_dynamic_colors">Colors dinàmics</string>
+    <string name="settings_dynamic_colors_desc">Fes servir els colors Material You del sistema (Android 12+)</string>
+    <string name="settings_sound">So de l\'avis</string>
+    <string name="settings_sound_default">So d\'alarma per defecte</string>
+    <string name="change_sound">Canvia</string>
+    <string name="preview_sound">Prova</string>
+    <string name="settings_channel">Canal de l\'avis</string>
+    <string name="settings_channel_desc">Tria si l\'avis sona amb el volum d\'alarma o el de multimèdia</string>
+    <string name="channel_alarm">Alarma</string>
+    <string name="channel_media">Multimèdia</string>
+    <string name="settings_vibrate">Vibració</string>
+    <string name="settings_vibrate_desc">Vibra amb cada avis</string>
 </resources>
