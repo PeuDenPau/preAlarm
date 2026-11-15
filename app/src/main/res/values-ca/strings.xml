@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">preAlarm</string>
+
+    <string name="home_title">A quina hora surts? ⏰</string>
+    <string name="home_empty_title">Encara no hi ha rutines</string>
+    <string name="home_empty_text">Crea la teva primera rutina amb les tasques que fas abans de sortir de casa.</string>
+    <string name="new_routine">Nova rutina</string>
+    <string name="exact_alarm_banner">Perquè els avisos sonin en el moment exacte, permet alarmes exactes als ajustos.</string>
+    <string name="open_settings">Obre els ajustos</string>
+
+    <string name="play_routine">Començar</string>
+    <string name="delete_routine">Elimina</string>
+    <string name="edit_routine">Edita</string>
+
+    <string name="editor_new_title">Nova rutina</string>
+    <string name="editor_edit_title">Edita la rutina</string>
+    <string name="routine_name_label">Nom de la rutina</string>
+    <string name="departure_time_label">Hora de sortida</string>
+    <string name="departure_time_value">Surto a les %1$s</string>
+    <string name="change_time">Canvia l\'hora</string>
+    <string name="tasks_section">Tasques, en ordre</string>
+    <string name="task_name_hint">Nova tasca</string>
+    <string name="minutes_hint">min</string>
+    <string name="task_minutes_value">%1$d min</string>
+    <string name="add_task">Afegeix una tasca</string>
+    <string name="move_up">Puja</string>
+    <string name="move_down">Baixa</string>
+    <string name="remove_task">Treu</string>
+    <string name="save">Desa</string>
+    <string name="cancel">Cancel·la</string>
+    <string name="ok">D\'acord</string>
+    <string name="pick_time_title">Hora de sortida</string>
+    <string name="total_summary">%1$d min de preparació · %2$d tasques</string>
+    <string name="editor_needs_name">Posa un nom a la rutina</string>
+    <string name="editor_needs_tasks">Afegeix almenys una tasca</string>
+    <string name="start_preview">Començaries a les %1$s</string>
+    <string name="start_without_saving">Començar sense desar</string>
+    <string name="edit_task">Edita la tasca</string>
+
+    <string name="help">Ajuda</string>
+    <string name="help_title">Com funciona</string>
+    <string name="help_body">1. Crea una rutina amb les tasques que fas abans de sortir i quant triga cada una.\n2. Prem «Començar»: l\'app calcula a quina hora has de començar i programa els avisos.\n3. En acabar cada període sonarà un avís breu. No hi ha res a descartar.\n4. En acabar cada tasca, prem «Fet!» perquè l\'app et digui si vas en hora, avançat o endarrerit.\n\nConsell: fes servir «Començar sense desar» per provar una rutina un cop sense desar-la.</string>
+
+    <string name="session_leaving_at">Surts a les %1$s</string>
+    <string name="session_departure_in">Sortida en %1$s</string>
+    <string name="session_current_task">Ara toca</string>
+    <string name="session_done_button">Fet!</string>
+    <string name="session_next_up">Després: %1$s</string>
+    <string name="session_on_time">Vas en hora</string>
+    <string name="session_behind">Vas %1$s endarrerit</string>
+    <string name="session_ahead">Vas %1$s avançat</string>
+    <string name="session_all_done_title">Tot a punt!</string>
+    <string name="session_all_done_text">Pots sortir. Et sobren %1$s.</string>
+    <string name="session_all_done_late_text">Surts amb %1$s de retard. Corre!</string>
+    <string name="session_overshoot">+%1$s de més</string>
+    <string name="session_remaining_left">%1$s restants</string>
+    <string name="session_stop">Acabar</string>
+    <string name="session_stop_confirm_title">Vols acabar la sessió?</string>
+    <string name="session_stop_confirm_text">Es cancel·laran els avisos pendents.</string>
+    <string name="session_task_done_at">Feta a les %1$s</string>
+
+    <string name="notify_channel_name">Avisos de rutina</string>
+    <string name="notify_start_title">Comença la teva rutina</string>
+    <string name="notify_start_text">Toca començar: %1$s (%2$d min)</string>
+    <string name="notify_task_end_title">S\'ha acabat el temps</string>
+    <string name="notify_task_end_text">«%1$s» ha acabat. Marca «Fet!» quan puguis.</string>
+    <string name="notify_departure_title">És l\'hora!</string>
+    <string name="notify_departure_text">Toca sortir de casa. Bon dia!</string>
+    <string name="settings_title">Ajustos</string>
+    <string name="settings_language">Idioma</string>
+    <string name="language_system">Idioma del sistema</string>
+    <string name="settings_theme">Tema</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Clar</string>
+    <string name="theme_dark">Fosc</string>
+    <string name="settings_dynamic_colors">Colors dinàmics</string>
+    <string name="settings_dynamic_colors_desc">Fes servir els colors Material You del sistema (Android 12+)</string>
+    <string name="settings_sound">So de l\'avis</string>
+    <string name="settings_sound_default">So d\'alarma per defecte</string>
+    <string name="change_sound">Canvia</string>
+    <string name="preview_sound">Prova</string>
+    <string name="settings_channel">Canal de l\'avis</string>
+    <string name="settings_channel_desc">Tria si l\'avis sona amb el volum d\'alarma o el de multimèdia</string>
+    <string name="channel_alarm">Alarma</string>
+    <string name="channel_media">Multimèdia</string>
+    <string name="settings_vibrate">Vibració</string>
+    <string name="settings_vibrate_desc">Vibra amb cada avis</string>
+</resources>

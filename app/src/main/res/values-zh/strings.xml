@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">preAlarm</string>
+
+    <string name="home_title">今天几点出门？ ⏰</string>
+    <string name="home_empty_title">还没有日常流程</string>
+    <string name="home_empty_text">创建你的第一个流程，加入出门前要做的事和每件事所需的时间。</string>
+    <string name="new_routine">新建流程</string>
+    <string name="exact_alarm_banner">要让提醒在准点响起，请在设置中允许使用精确闹钟。</string>
+    <string name="open_settings">打开设置</string>
+
+    <string name="play_routine">开始</string>
+    <string name="delete_routine">删除</string>
+    <string name="edit_routine">编辑</string>
+
+    <string name="editor_new_title">新建流程</string>
+    <string name="editor_edit_title">编辑流程</string>
+    <string name="routine_name_label">流程名称</string>
+    <string name="departure_time_label">出门时间</string>
+    <string name="departure_time_value">%1$s 出门</string>
+    <string name="change_time">更改时间</string>
+    <string name="tasks_section">任务（按顺序）</string>
+    <string name="task_name_hint">新任务</string>
+    <string name="minutes_hint">分钟</string>
+    <string name="task_minutes_value">%1$d 分钟</string>
+    <string name="add_task">添加任务</string>
+    <string name="move_up">上移</string>
+    <string name="move_down">下移</string>
+    <string name="remove_task">移除</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="pick_time_title">出门时间</string>
+    <string name="total_summary">准备 %1$d 分钟 · %2$d 项任务</string>
+    <string name="editor_needs_name">给流程起个名字</string>
+    <string name="editor_needs_tasks">至少添加一项任务</string>
+    <string name="start_preview">预计 %1$s 开始</string>
+    <string name="start_without_saving">不保存直接开始</string>
+    <string name="edit_task">编辑任务</string>
+
+    <string name="help">帮助</string>
+    <string name="help_title">使用说明</string>
+    <string name="help_body">1. 创建一个流程，加入出门前要做的事和每件事需要的时间。\n2. 点按「开始」：应用会计算你该几点开始，并安排提醒。\n3. 每个时间段结束时，会响起简短的提示音，无需手动关闭。\n4. 每完成一项任务，点按「完成！」，应用就会告诉你进度是准时、提前还是落后。\n\n提示：使用「不保存直接开始」可以只试一次而不保存流程。</string>
+
+    <string name="session_leaving_at">%1$s 出门</string>
+    <string name="session_departure_in">距出门还有 %1$s</string>
+    <string name="session_current_task">现在做</string>
+    <string name="session_done_button">完成！</string>
+    <string name="session_next_up">接下来：%1$s</string>
+    <string name="session_on_time">进度准时</string>
+    <string name="session_behind">落后 %1$s</string>
+    <string name="session_ahead">提前 %1$s</string>
+    <string name="session_all_done_title">全部完成！</string>
+    <string name="session_all_done_text">可以出门了，还富余 %1$s。</string>
+    <string name="session_all_done_late_text">出门要晚 %1$s，快走吧！</string>
+    <string name="session_overshoot">超时 %1$s</string>
+    <string name="session_remaining_left">剩余 %1$s</string>
+    <string name="session_stop">结束</string>
+    <string name="session_stop_confirm_title">结束本次会话？</string>
+    <string name="session_stop_confirm_text">待触发的提醒将被取消。</string>
+    <string name="session_task_done_at">%1$s 完成</string>
+
+    <string name="notify_channel_name">流程提醒</string>
+    <string name="notify_start_title">开始你的流程</string>
+    <string name="notify_start_text">该开始了：%1$s（%2$d 分钟）</string>
+    <string name="notify_task_end_title">时间到</string>
+    <string name="notify_task_end_text">「%1$s」时间到。方便时点按「完成！」。</string>
+    <string name="notify_departure_title">该出发了！</string>
+    <string name="notify_departure_text">该出门啦，祝你一天顺利！</string>
+    <string name="settings_title">设置</string>
+    <string name="settings_language">语言</string>
+    <string name="language_system">跟随系统语言</string>
+    <string name="settings_theme">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="settings_dynamic_colors">动态取色</string>
+    <string name="settings_dynamic_colors_desc">使用系统的 Material You 取色（Android 12+）</string>
+    <string name="settings_sound">提醒铃声</string>
+    <string name="settings_sound_default">默认闹钟铃声</string>
+    <string name="change_sound">更改</string>
+    <string name="preview_sound">试听</string>
+    <string name="settings_channel">提醒声道</string>
+    <string name="settings_channel_desc">选择提醒使用闹钟音量还是媒体音量</string>
+    <string name="channel_alarm">闹钟</string>
+    <string name="channel_media">媒体</string>
+    <string name="settings_vibrate">振动</string>
+    <string name="settings_vibrate_desc">每次提醒时振动</string>
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">preAlarm</string>
+
+    <string name="home_title">What time are you leaving? ⏰</string>
+    <string name="home_empty_title">No routines yet</string>
+    <string name="home_empty_text">Create your first routine with the things you do before leaving home.</string>
+    <string name="new_routine">New routine</string>
+    <string name="exact_alarm_banner">So alerts ring at the exact moment, allow exact alarms in Settings.</string>
+    <string name="open_settings">Open settings</string>
+
+    <string name="play_routine">Start</string>
+    <string name="delete_routine">Delete</string>
+    <string name="edit_routine">Edit</string>
+
+    <string name="editor_new_title">New routine</string>
+    <string name="editor_edit_title">Edit routine</string>
+    <string name="routine_name_label">Routine name</string>
+    <string name="departure_time_label">Departure time</string>
+    <string name="departure_time_value">I leave at %1$s</string>
+    <string name="change_time">Change time</string>
+    <string name="tasks_section">Tasks, in order</string>
+    <string name="task_name_hint">New task</string>
+    <string name="minutes_hint">min</string>
+    <string name="task_minutes_value">%1$d min</string>
+    <string name="add_task">Add task</string>
+    <string name="move_up">Move up</string>
+    <string name="move_down">Move down</string>
+    <string name="remove_task">Remove</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="pick_time_title">Departure time</string>
+    <string name="total_summary">%1$d min of prep · %2$d tasks</string>
+    <string name="editor_needs_name">Give the routine a name</string>
+    <string name="editor_needs_tasks">Add at least one task</string>
+    <string name="start_preview">You would start at %1$s</string>
+    <string name="start_without_saving">Start without saving</string>
+    <string name="edit_task">Edit task</string>
+
+    <string name="help">Help</string>
+    <string name="help_title">How it works</string>
+    <string name="help_body">1. Create a routine with the tasks you do before leaving and how long each one takes.\n2. Tap Start: the app works out when you should begin and schedules the alerts.\n3. When each period ends, a short sound plays. There is nothing to dismiss.\n4. When you finish a task, tap Done! so the app can tell if you are on time, ahead or behind.\n\nTip: use Start without saving to try a routine once without keeping it.</string>
+
+    <string name="session_leaving_at">You leave at %1$s</string>
+    <string name="session_departure_in">Leaving in %1$s</string>
+    <string name="session_current_task">Now it\'s time for</string>
+    <string name="session_done_button">Done!</string>
+    <string name="session_next_up">Next: %1$s</string>
+    <string name="session_on_time">You\'re on time</string>
+    <string name="session_behind">You\'re %1$s behind</string>
+    <string name="session_ahead">You\'re %1$s ahead</string>
+    <string name="session_all_done_title">All set!</string>
+    <string name="session_all_done_text">You can leave. You have %1$s to spare.</string>
+    <string name="session_all_done_late_text">You\'re leaving %1$s late. Hurry!</string>
+    <string name="session_overshoot">+%1$s over</string>
+    <string name="session_remaining_left">%1$s left</string>
+    <string name="session_stop">End</string>
+    <string name="session_stop_confirm_title">End this session?</string>
+    <string name="session_stop_confirm_text">Pending alerts will be cancelled.</string>
+    <string name="session_task_done_at">Done at %1$s</string>
+
+    <string name="notify_channel_name">Routine alerts</string>
+    <string name="notify_start_title">Start your routine</string>
+    <string name="notify_start_text">Time to begin: %1$s (%2$d min)</string>
+    <string name="notify_task_end_title">Time\'s up</string>
+    <string name="notify_task_end_text">«%1$s» is over. Mark Done! when you can.</string>
+    <string name="notify_departure_title">It\'s time!</string>
+    <string name="notify_departure_text">Time to leave home. Have a great day!</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_language">Language</string>
+    <string name="language_system">System language</string>
+    <string name="settings_theme">Theme</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="settings_dynamic_colors">Dynamic colors</string>
+    <string name="settings_dynamic_colors_desc">Use the system Material You colors (Android 12+)</string>
+    <string name="settings_sound">Alert sound</string>
+    <string name="settings_sound_default">Default alarm sound</string>
+    <string name="change_sound">Change</string>
+    <string name="preview_sound">Preview</string>
+    <string name="settings_channel">Alert channel</string>
+    <string name="settings_channel_desc">Play the alert with the alarm volume or the media volume</string>
+    <string name="channel_alarm">Alarm</string>
+    <string name="channel_media">Media</string>
+    <string name="settings_vibrate">Vibration</string>
+    <string name="settings_vibrate_desc">Vibrate with each alert</string>
+</resources>
